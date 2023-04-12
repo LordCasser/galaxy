@@ -3,9 +3,9 @@ mod parallel;
 use std::path::Path;
 use colored::Colorize;
 fn main() {
-    let code_base = Path::new("/home/lordcasser/workspace/galaxy/sample");
+    let code_base = Path::new("sample");
     let code_path = utils::code_path_seek(code_base, false);
-    let rule_base =  Path::new("/home/lordcasser/workspace/galaxy/rules");
+    let rule_base =  Path::new("rules");
     let rule_path = utils::rule_path_seek(rule_base);
     let mut scanner = parallel::Scanner::new(rule_path, code_path, 2, false);
     let results =  scanner.wait_for_result();
