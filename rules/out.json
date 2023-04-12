@@ -1,0 +1,7 @@
+{
+    "issue":"test",
+    "discription":"test",
+    "patterns": [
+        "{$buf[_];memcpy($buf,_,_);}"
+    ]
+}
