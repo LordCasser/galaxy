@@ -30,20 +30,20 @@ pub fn prase_json(data: &str) -> Rule {
     return rule;
 }
 
-fn traverse_directories(dir_path: &Path, last_result: &mut Vec<PathBuf>) -> Vec<PathBuf> {
-    if dir_path.is_dir() {
-        for entry in fs::read_dir(dir_path).expect("[X] read_dir call failed") {
-            let entry = entry.expect("[X] unable to get entry");
-            let path = entry.path();
+// fn traverse_directories(dir_path: &Path, last_result: &mut Vec<PathBuf>) -> Vec<PathBuf> {
+//     if dir_path.is_dir() {
+//         for entry in fs::read_dir(dir_path).expect("[X] read_dir call failed") {
+//             let entry = entry.expect("[X] unable to get entry");
+//             let path = entry.path();
 
-            if path.is_dir() {
-                last_result.push(path.clone());
-                traverse_directories(&path, last_result);
-            }
-        }
-    }
-    last_result.clone()
-}
+//             if path.is_dir() {
+//                 last_result.push(path.clone());
+//                 traverse_directories(&path, last_result);
+//             }
+//         }
+//     }
+//     last_result.clone()
+// }
 
 //find all rules folder by folder
 pub fn rule_path_seek(rule_base: &Path) -> Vec<Rule> {

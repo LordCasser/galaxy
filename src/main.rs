@@ -11,10 +11,8 @@ fn main() {
     let results =  scanner.wait_for_result();
     for i in results.iter(){
         println!("{} {}","[+]issue:".blue(),i.issue.blue());
-        // println!("——————————————————————");
         for (path,code) in i.issue_code.iter(){
             println!("{}\n{}",path,code);
-            // println!("——————————————————————");
         }
     }
 }
