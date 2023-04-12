@@ -1,6 +1,6 @@
 mod utils;
 mod parallel;
-use std::path::{Path, PathBuf};
+use std::path::{Path};
 use colored::Colorize;
 fn main() {
     let code_base = Path::new("/home/lordcasser/workspace/galaxy/sample");

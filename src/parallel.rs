@@ -1,11 +1,11 @@
 use crate::utils::{self, Rule};
 use crossbeam::thread::scope;
-use std::collections::{HashMap, VecDeque};
-use std::path::{Path, PathBuf};
+use std::collections::{VecDeque};
+use std::path::{PathBuf};
 use std::str::FromStr;
 use std::sync::Mutex;
 use std::time::Duration;
-use std::{result, thread};
+use std::{thread};
 use colored::Colorize;
 #[derive(Clone)]
 pub struct ScanResult {
